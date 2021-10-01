@@ -14,8 +14,3 @@ class SearchImageEvent extends ImagesEvent {
   @override
   List<Object?> get props => [query];
 }
-
-class TrendingImageEvent extends ImagesEvent {
-  @override
-  List<Object?> get props => [];
-}

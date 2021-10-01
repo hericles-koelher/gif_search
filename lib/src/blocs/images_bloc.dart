@@ -13,7 +13,6 @@ class ImagesBloc extends Bloc<ImagesEvent, ImagesState> {
 
   ImagesBloc() : super(const ImagesInitial()) {
     on<SearchImageEvent>(_search);
-    on<TrendingImageEvent>(_trending);
   }
 
   void _search(SearchImageEvent event, Emitter<ImagesState> emit) async {
@@ -48,6 +47,4 @@ class ImagesBloc extends Bloc<ImagesEvent, ImagesState> {
       emit(ImagesError(query: event.query));
     }
   }
-
-  void _trending(TrendingImageEvent event, Emitter<ImagesState> emit) async {}
 }
